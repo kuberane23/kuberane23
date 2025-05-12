@@ -1,3 +1,4 @@
+#THIS IS WRITTEN FOR EDUCATIONAL PURPOSES
 from pynput import keyboard
 from datetime import datetime
 import os
